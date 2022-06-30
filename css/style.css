@@ -1,0 +1,122 @@
+/* COMMON */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+/* HEADER 1. 로고 */
+header {
+  background-color: blueviolet;
+}
+header .inner {
+  position: relative;
+  background-color: orange;
+  width: 1100px;
+  height: 120px;
+  margin: 0 auto;
+}
+header .inner .logo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  margin: auto;
+}
+header .inner .logo img {
+  width: 100px;
+  height: 100px;
+}
+header .inner .logo-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100px;
+  height: 100px;
+  margin: auto;
+  line-height: 1px;
+}
+header .inner .logo-text p:first-child {
+  font-size: 30px;
+  font-weight: 700;
+  color: #ff7878;
+  letter-spacing: -2px;
+}
+header .inner .logo-text p:last-child {
+  font-size: 20px;
+}
+/* HEADER 1. 메뉴 */
+header .inner .header-menu {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  margin: auto;
+}
+header .inner .header-menu .menu {
+  display: flex;
+}
+header .inner .header-menu .menu li {
+  position: relative;
+}
+header .inner .header-menu .menu li::before {
+  content: "";
+  width: 1px;
+  height: 12px;
+  background-color: #e5e5e5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+header .inner .header-menu .menu li:first-child:before {
+  display: none;
+}
+header .inner .header-menu .menu li a {
+  display: block;
+  padding: 11px 16px;
+  font-size: 13px;
+  color: #ff7878;
+}
+header .inner .header-menu .menu li a:hover {
+  color: #000;
+}
+
+/* SECTION - MENU */
+.main {
+  background-color: #f4bfbf;
+}
+.main .inner {
+  position: relative;
+  width: 1100px;
+  height: 646px;
+  margin: 0 auto;
+}
+.main .title img {
+  position: absolute;
+  right: 0px;
+  width: 646px;
+  height: 646px;
+}
+.main .title p {
+  position: absolute;
+  top: 0;
+  left: 0px;
+}
+.main .title p:nth-child(2) {
+  font-size: 40px;
+  font-weight: bold;
+  color: #ff5d5d;
+}
+.main .title p:nth-child(3) {
+  font-size: 20px;
+}
