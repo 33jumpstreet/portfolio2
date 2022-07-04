@@ -14,6 +14,70 @@ a {
 li {
   list-style: none;
 }
+img {
+  display: block;
+}
+.btn {
+  width: 130px;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  transition: .4s;
+}
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+.btn.btn--reverse {
+  background-color: #333;
+  color: #fff;
+}
+.btn.btn--reverse:hover {
+  background-color: transparent;
+  color: #333;
+}
+.btn.btn--brown {
+  color: #592B18;
+  border-color: #592B18;
+}
+.btn.btn--brown:hover {
+  color: #fff;
+  background-color: #592B18;
+}
+.btn.btn--gold {
+  color: #d9aa8a;
+  border-color: #d9aa8a;
+}
+.btn.btn--gold:hover {
+  color: #fff;
+  background-color: #d9aa8a;
+}
+.btn.btn--white {
+  color: #fff;
+  border-color: #fff;
+}
+.btn.btn--white:hovers {
+  color: #333;
+  background-color: #fff;
+}
+.btn.btn--primary {
+  color: #fff;
+  background-color: #EA9926;
+  border: none;
+}
+.btn.btn--primary:hover {
+  background-color: #cc8823;
+}
+.btn.block {
+  width: 100%;
+}
 /* HEADER 1. 로고 */
 header .inner {
   position: relative;
@@ -82,10 +146,10 @@ header .inner .header-menu .menu li a {
   padding: 11px 16px;
   font-size: 20px;
   font-weight: 400;
-  color: #ff7878;
+  color: #000;
 }
 header .inner .header-menu .menu li a:hover {
-  color: #000;
+  color: #ff7878;
 }
 
 /* SECTION - MENU */
@@ -122,6 +186,50 @@ header .inner .header-menu .menu li a:hover {
   left: 0;
 }
 
+/* section - projects_intro */
+.intro {
+  position: relative;
+}
+.intro .bg-left {
+  width: 50%;
+  height: 100%;
+  background-color: #C1FFD7;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.intro .bg-right {
+  width: 50%;
+  height: 100%;
+  background-color: #FCFFA6;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+}
+.intro .inner {
+  background-image: url("../img/project-intro.png");
+  width: 1100px;
+  height: 241px;
+  margin: 0 auto;
+  position: relative;
+}
+.intro .btn-group {
+  position: absolute;
+  right: 0;
+  bottom: 24px;
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.intro .btn-group .btn.git {
+  margin-right: 10px;
+}
+.intro .btn-group .btn.blog {
+  width: 110px;
+}
+
+
 /* section - profile */
 .profile {
   background-color: #9ADCFF;
@@ -138,10 +246,97 @@ header .inner .header-menu .menu li a:hover {
   width: 646px;
   height: 646px;
 }
-.profile .profile__area p {
+
+.profile .profile__area p:nth-child(2) {
+  font-size: 40px;
+  font-weight: bold;
+  color: #ff5d5d;
   position: absolute;
-  top: 30%;
-  right: -100px;
-  font-size: 20px;
-  line-height: 30px;
+  top: 50px;
+  right: 400px;
 }
+.profile .profile__area p:nth-child(3) {
+  position: absolute;
+  top: 20%;
+  right: -100px;
+  font-size: 24px;
+  line-height: 35px;
+}
+
+/* section - projects */
+.projects {
+  display: flex;
+  justify-content: center;
+  background-color: #f6f5ef;
+  overflow: hidden;
+  position: relative;
+  height: 663px;
+  transition: height .4s;
+}
+.projects.hide {
+  height: 0;
+}
+.projects .swiper {
+  width: calc(819px * 3 + 10px * 2);
+  height: 553px;
+  flex-shrink: 0;
+}
+.projects .swiper-slide {
+  position: relative;
+  opacity: 0.5;
+  transition: opacity 1s;
+}
+.projects .swiper-slide-active {
+  opacity: 1;
+}
+.projects .swiper-slide .btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.projects .swiper-pagination {
+  bottom: 40px !important;
+  z-index: 1;
+}
+.projects .swiper-pagination .swiper-pagination-bullet {
+  background-color: transparent;
+  background-image: url("../img/promotion_slide_pager.png");
+  width: 13px;
+  height: 12px;
+  margin-right: 6px;
+}
+.projects .swiper-pagination .swiper-pagination-bullet:last-child {
+  margin-right: 0;
+}
+.projects .swiper-pagination .swiper-pagination-bullet .swiper-pagination-bullet-active {
+  background-image: url("../img/promotion_slide_pager_on.png");
+}
+.projects .swiper-button-prev,
+.projects .swiper-button-next {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  top: 300px;
+  z-index: 1;
+  color: #333;
+}
+.projects .swiper-button-prev {
+  left: 50%;
+  margin-left: -480px;
+}
+.projects .swiper-button-next {
+  right: 50%;
+  margin-right: -480px;
+}
+.projects .swiper-button-prev:hover,
+.projects .swiper-button-next:hover {
+  background-color: #333;
+  color: #fff;
+}
+.projects .swiper-button-prev:after,
+.projects .swiper-button-next:after {
+  display: none;
+} 
